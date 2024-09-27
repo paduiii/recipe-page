@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Recipe page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    @font-face {
+      font-family: "Outfit";
+      src: url(assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+    }
+
+    @font-face {
+      font-family: "Outfit-Regular";
+      src: url(assets/fonts/outfit/static/Outfit-Regular.ttf);
+    }
+
+    @font-face {
+      font-family: "Young";
+      src: url(assets/fonts/young-serif/YoungSerif-Regular.ttf);
+    }
+
+    body {
+      background-color: hsl(30, 54%, 90%);
+      margin: 0px;
+    }
+
+    footer {
+      margin-bottom: 70px;
+    }
+
+    .container {
+      margin-top: 100px;
+      margin-bottom: 30px;
+      width: auto;
+      display: grid;
+      justify-items: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .card-all {
+      width: 650px;
+      background-color: hsl(0, 0%, 100%);
+      padding: 30px;
+      border-radius: 20px;
+      font-family: "Outfit";
+      font-size: 16px;
+    }
+
+    .card-all img {
+      width: 650px;
+      border-radius: 10px;
+    }
+
+    .card-1 {
+      font-weight: 400;
+      color: hsl(30, 10%, 34%);
+    }
+
+    .card-1 p {
+      margin-top: 0px;
+    }
+
+    .card-1 h1 {
+      font-family: "Young";
+      font-weight: 400;
+      color: hsl(24, 5%, 18%);
+      margin-bottom: 10px;
+    }
+
+    .card-2 {
+      color: hsl(332, 51%, 32%);
+      background-color: hsl(330, 100%, 98%);
+      padding: 20px;
+      margin-top: 30px;
+      border-radius: 10px;
+    }
+
+    .card-2 h4 {
+      margin: 0px;
+    }
+
+    .card-2 ul {
+      padding-left: 25px;
+    }
+
+    .card-2 ::marker {
+      color: hsl(332, 51%, 32%);
+    }
+
+    .card-2 li {
+      color: hsl(30, 10%, 34%);
+      list-style-position: outside;
+      padding-left: 5px;
+    }
+
+    .card-3 h2 {
+      font-family: "Young";
+      font-weight: 400;
+      color: hsl(14, 45%, 36%);
+      margin-bottom: 10px;
+    }
+
+    .card-3 ul {
+      padding-left: 25px;
+    }
+
+    .card-3 ::marker {
+      color: hsl(14, 45%, 36%);
+    }
+
+    .card-3 li {
+      color: hsl(30, 10%, 34%);
+      list-style-type: square;
+      padding: 5px;
+      padding-left: 12px;
+    }
+
+    .card-4 h2 {
+      font-family: "Young";
+      font-weight: 400;
+      color: hsl(14, 45%, 36%);
+      margin-bottom: 10px;
+    }
+
+    .card-4 ol {
+      padding-left: 25px;
+    }
+
+    .card-4 ::marker {
+      color: hsl(14, 45%, 36%);
+      font-weight: 600;
+    }
+
+    .card-4 li {
+      color: hsl(30, 10%, 34%);
+      list-style-type: decimal;
+      padding: 5px;
+      padding-left: 12px;
+    }
+
+    .card-5 {
+      color: hsl(30, 10%, 34%);
+    }
+
+    .card-5 h2 {
+      font-family: "Young";
+      font-weight: 400;
+      color: hsl(14, 45%, 36%);
+      margin-bottom: 10px;
+    }
+
+    .bold-text {
+      font-weight: 600; /* Makes 'Preparation' bold */
+    }
+
+    table {
+      width: 100%;
+      font-family: "Outfit";
+    }
+
+    tr .colum-1 {
+      width: 300px;
+      padding-left: 30px;
+    }
+
+    tr .colum-2 {
+      color: hsl(14, 45%, 36%);
+      font-weight: 600;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        margin: 0px;
+      }
+
+      .card-all {
+        width: 375px;
+        border-radius: 0px;
+        padding: 0px;
+      }
+
+      .card-all img {
+        width: 400px;
+        height: 200px;
+        padding-left: 0px;
+        padding-top: 0px;
+        margin: 0px;
+        border-radius: 0px;
+      }
+
+      .card-1 {
+        padding: 30px;
+        padding-bottom: 20px;
+      }
+
+      .card-2 {
+        width: 250px;
+        justify-items: center;
+        align-items: center;
+        margin: auto;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding-bottom: 10px;
+      }
+
+      .card-3 {
+        padding: 30px;
+        padding-bottom: 0px;
+      }
+
+      .card-3 h2 {
+        margin-top: 0px;
+      }
+
+      .card-4 {
+        padding: 30px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        font-size: 16px;
+      }
+
+      .card-5 {
+        font-size: 16.2px;
+        padding: 30px;
+        padding-top: 0px;
+        padding-bottom: 20px;
+      }
+
+      tr .colum-1 {
+      width: 130px;
+    }
+
+    footer {
+      display: none;
+    }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="card-all">
+      <img src="assets/images/image-omelette.jpeg" alt="omelette">
+      <div class="card-1">
+        <h1>Simple Omelette Recipe</h1>
+
+        <p>An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked
+          to perfection, optionally filled with your choice of cheese, vegetables, or meats.
+        </p>
+      </div>
+
+      <div class="card-2">
+        <h4>Preparation time</h4>
+        <ul>
+          <li><sapn class="bold-text">Total</sapn>: Approximately 10 minutes</li>
+          <li><sapn class="bold-text">Preparation</sapn>: 5 minutes</li>
+          <li><sapn class="bold-text">Cooking</sapn>: 5 minutes</li>
+        </ul>
+      </div>
+
+      <div class="card-3">
+        <h2>Ingredients</h2>
+        <ul class="b">
+          <li>2-3 large eggs</li>
+          <li>Salt, to taste
+          <li>Pepper, to taste</li>
+          <li>1 tablespoon of butter or oil</li>
+          <li>Optional fillings: cheese, diced vegetables, cooked meats, herbs</li>
+        </ul>
+        <hr>
+      </div>
+
+      <div class="card-4">
+        <h2>Instructions</h2>
+        <ol>
+          <li><sapn class="bold-text">Beat the eggs</sapn>: In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed.
+            You can add a tablespoon of water or milk for a fluffier texture.</li>
+
+          <li><sapn class="bold-text">Heat the pan</sapn>: Place a non-stick frying pan over medium heat and add butter or oil.</li>
+
+          <li><sapn class="bold-text">Cook the omelette</sapn>: Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure
+            the eggs evenly coat the surface.</li>
+
+          <li><sapn class="bold-text">Add fillings (optional)</sapn>: When the eggs begin to set at the edges but are still slightly runny in the
+            middle, sprinkle your chosen fillings over one half of the omelette.</li>
+
+          <li><sapn class="bold-text">Fold and serve</sapn>: As the omelette continues to cook, carefully lift one edge and fold it over the
+            fillings. Let it cook for another minute, then slide it onto a plate.</li>
+
+          <li><sapn class="bold-text">Enjoy</sapn>: Serve hot, with additional salt and pepper if needed.</li>
+        </ol>
+        <hr>
+      </div>
+
+      <div class="card-5">
+        <h2>Nutrition</h2>
+        <p>The table below shows nutritional values per serving without the additional fillings.</p>
+        <table>
+          <tr>
+            <td class="colum-1">Calories</td>
+            <td class="colum-2">277kcal</td>
+          </tr>
+        </table>
+        <hr>
+        <table>
+          <tr class="class1">
+            <td class="colum-1">Carbs</td>
+            <td class="colum-2">0g</td>
+          </tr>
+        </table>
+        <hr>
+        <table>
+          <tr class="class1">
+            <td class="colum-1">Protein</td>
+            <td class="colum-2">20g</td>
+          </tr>
+        </table>
+        <hr>
+        <table>
+        <tr class="class1">
+          <td class="colum-1">Fat</td>
+          <td class="colum-2">22g</td>
+        </tr>
+      </table>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+<footer>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/paduiii">Nontakron Srinitee</a>.
+  </div>
+</footer>
+
+</html>
